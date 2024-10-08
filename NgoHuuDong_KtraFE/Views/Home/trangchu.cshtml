@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<div id="main">
+    <div class="address-header">
+        <h2> &emsp; 2. Địa chỉ giao hàng</h2>
+        <p>
+            &emsp;&emsp; Bạn muốn giao hàng đến địa chỉ khác?
+            <a href="#">Thêm địa chỉ giao hàng mới</a>
+        </p>
+    </div>
+    <div class="form-container">
+        
+
+        <form id="shippingForm" method="post" action="/your-action-url">
+            <div class="form-row">
+                <label for="fullName">Họ tên</label>
+                <input type="text" id="fullName" name="fullName" value="">
+                <div id="fullNameError" class="error-message"></div>
+            </div>
+
+            <div class="form-row">
+                <label for="phoneNumber">Điện thoại di động</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" value="">
+                <div id="phoneNumberError" class="error-message"></div>
+            </div>
+
+            <div class="form-row">
+                <label for="city">Tỉnh/Thành phố</label>
+                <select id="city" name="city">
+                    <option value="">Chọn Tỉnh/Thành phố</option>
+                    <!-- Thêm các option tỉnh thành khác tại đây -->
+                </select>
+                <div id="cityError" class="error-message"></div>
+            </div>
+
+            <div class="form-row">
+                <label for="district">Quận/Huyện</label>
+                <select id="district" name="district">
+                    <option value="">Chọn Quận/Huyện</option>
+                    <!-- Thêm các option quận huyện khác tại đây -->
+                </select>
+                <div id="districtError" class="error-message"></div>
+            </div>
+
+            <div class="form-row">
+                <label for="ward">Phường/Xã</label>
+                <select id="ward" name="ward">
+                    <option value="">Chọn Phường/Xã</option>
+                    <!-- Thêm các option phường xã tại đây -->
+                </select>
+                <div id="wardError" class="error-message"></div>
+            </div>
+
+            <div class="form-row">
+                <label for="address">Địa chỉ</label>
+                <input type="text" id="address" name="address" placeholder="Ví dụ: 52, đường Trần Hưng Đạo">
+                <div id="addressError" class="error-message"></div>
+            </div>
+
+            <div class="check-address">
+                <label>Loại địa chỉ</label>
+                <div class="address-type">
+                    <input type="radio" id="home" name="addressType" value="home">
+                    <label for="home">Nhà riêng / Chung cư</label>
+
+                    <input type="radio" id="office" name="addressType" value="office">
+                    <label for="office">Cơ quan / Công ty</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <input type="checkbox" id="defaultAddress" name="defaultAddress">
+                <label for="defaultAddress">Sử dụng địa chỉ này làm mặc định</label>
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" class="cancel-button">Hủy bỏ</button>
+                <button type="submit" class="submit-button">Giao đến địa chỉ này</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

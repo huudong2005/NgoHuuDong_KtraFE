@@ -1,0 +1,404 @@
+﻿<style type="text/css">
+    body {
+        background-color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+    }
+
+    #container {
+        border: 2px solid #808080;
+        border-radius: 4px;
+        width: 1200px;
+        margin: 0px auto;
+       
+    }
+
+    #topMenu {
+        background-color: white;
+        padding: 0px;
+        margin-bottom: -5px; 
+        padding-bottom: 0;
+        border-bottom: 1px solid #808080;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #search-container {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #search-box {
+        width: 500px;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        margin-bottom:4px;
+    }
+
+    #search-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px ;
+        margin-left: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        font-size: 16px;
+        margin :0;
+    }
+
+        #search-button:hover {
+            background-color: #0056b3;
+        }
+    .search-input {
+        width: 70%;
+        padding: 10px;
+        font-size: 16px;
+        margin:0px;
+    }
+
+    #top{
+       
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+        #topMenu a, #topMenu a:visited {
+            position: relative;
+            text-decoration: none;
+            display: block;
+            color: black;
+            width: 10em;
+        }
+
+
+    #main {
+        margin-left: 60px;
+        padding: 20px; /* Điều chỉnh padding nếu cần */
+        color: black;
+        margin: 0px;
+        width: auto;
+        margin-top: -22px;
+        padding-top: 0;
+        background-color: lightgrey;
+    }
+    address-header {
+        margin-top: 0px;
+        margin-bottom: 20px;
+       height:200px;
+    }
+   
+    #top{
+        height: 30px;
+        background-color:palegreen
+    }
+    #intro {
+        height: 30px;
+        width: auto;
+        background-color: white;
+        color: black;
+        margin-bottom: 0px;
+        padding-bottom: 30px;
+        
+    }
+    #product-list {
+        display: flex;
+        justify-content: space-around; /* Căn đều các mục sản phẩm */
+        
+        padding: 20px;
+        background-color: white;
+    }
+
+        #product-list a {
+            color: black;
+            text-decoration: none;
+            font-size: 9px;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+            min-width: 50px; /* Đảm bảo kích thước tối thiểu của mục */
+        }
+
+            #product-list a:hover {
+                background-color: #f0f0f0;
+                border-color: #007bff;
+            }
+            #MucSanPham{
+                height:auto;
+                width:auto;
+            }
+    .form-container {
+        width: 80%; /* Điều chỉnh kích thước chiều rộng của form */
+        max-width: 800px; /* Đặt giới hạn tối đa chiều rộng */
+        margin-left: auto; /* Đẩy form sang lề phải */
+        margin-right: 0; /* Lề phải sát biên */
+        background-color: #d6d1d1;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        display: flex;
+        justify-content: flex-end; /* Căn về phía bên phải */
+        padding-right: 50px; /* Điều chỉnh khoảng cách bên phải */
+    }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px; /* Tạo khoảng cách giữa nhãn và input */
+        }
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%; /* Các input chiếm toàn bộ chiều rộng của form */
+            margin-bottom: 15px; /* Khoảng cách giữa các trường */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px; /* Bo góc */
+        }
+
+        .form-container h2 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .form-container p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .form-container a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .form-container a:hover {
+                text-decoration: underline;
+            }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        
+        margin-bottom: 15px;
+    }
+    
+
+        
+
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align:left;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    .address-type {
+        display: flex;
+        justify-content: space-between;
+        width:20px;
+    }
+
+    .form-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .cancel-button {
+        background-color: #f5f5f5;
+        color: #333;
+    }
+
+        .cancel-button:hover {
+            background-color: #e0e0e0;
+        }
+
+    .submit-button {
+        background-color: #007bff;
+        color: white;
+    }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+
+    .error-message {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    header {
+        background-color: #f8f9fa;
+        padding: 0px ;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        color: black;
+        
+    }
+
+    .header-container {
+        width: auto;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 20px;
+    }
+    
+
+    .nav-link {
+        text-decoration: none;
+        color: #333;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+        .nav-link:hover {
+            color: #007bff;
+        }
+
+    .fa-shopping-cart {
+        font-size: 20px;
+        color: dodgerblue;
+        padding: 10px;
+    }
+    .fa-home {
+        font-size: 20px;
+        color: dodgerblue;
+        padding: 10px;
+    }
+    .fa-smile {
+        font-size: 20px;
+        color: dodgerblue;
+        padding: 10px;
+    }
+    .fa-check-circle {
+        font-size: 12px;
+        color: dodgerblue;
+        padding: 10px;
+    }
+    .fa-box {
+        font-size: 12px;
+        color: dodgerblue;
+        padding: 10px;
+    }
+    .fa-retweet{
+        font-size: 12px;
+        color: dodgerblue;
+        padding: 10px;
+    }
+    .fa-tag {
+        font-size: 12px;
+        color: dodgerblue;
+        padding: 10px;
+    }
+    .fa-shipping-fast {
+        font-size:12px;
+        color: dodgerblue;
+        padding: 10px;
+    }
+    .fa-shipping-fast {
+        font-size: 12px;
+        color: dodgerblue;
+        padding: 10px;
+    }
+        .fa-shopping-cart:hover {
+            color: #0056b3;
+        }
+    
+
+  
+</style>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="container">
+        <div id="top">
+            Freeship đơn từ 45k, giảm nhiều hơn cùng Freeship XTRA
+        </div>
+        <div id="TopMenu">
+
+            <img height="70" src="~/Content/Screenshot 2024-10-01 073941.png" />>
+
+            <div id="search-container">
+                <input type="text" id="search-box" placeholder="100% hàng thật">
+                <button class="search-button">Tìm kiếm</button>&emsp;
+                <div class="header-container">
+                    <a href="/" class="nav-link">
+                        <i class="fas fa-home"></i>&emsp;Trang chủ
+                    </a>
+                    <a href="/account" class="nav-link">
+                        <i class="far fa-smile"></i>&emsp;Tài khoản
+                    </a>
+                    <a href="/cart" class="nav-link">
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+
+            </div>
+           
+        </div>
+        <div id="MucSanPham">
+            <div id="product-list">
+                <a href="#">Điện gia dụng </a> &emsp;
+                <a href="#">Xe cộ</a>&emsp;
+                <a href="#">Mẹ &amp; bé</a>&emsp;
+                <a href="#">Khỏe đẹp</a>&emsp;
+                <a href="#">nhà cửa </a>&emsp;
+                <a href="#">sách </a>&emsp;
+                <a href="#">oppo </a>&emsp;
+                <a href="#">Iphone 15 promax </a>&emsp;
+                <a href="#">Iphone 14 </a>&emsp;
+                <a href="#">Xiaomi A17K </a>&emsp;
+            </div>
+        </div>
+        
+        
+        <div id="intro">
+            &emsp; <a href="#">Cam kết </a> &emsp;&emsp;
+            <a href="#"><i class="fas fa-check-circle"></i> 100% hàng thật</a>&emsp;
+            <a href="#"> <i class="fas fa-retweet"></i>Hoàn 200% nếu hàng giả</a>&emsp;
+            <a href="#"><i class="fas fa-box"></i>30 ngày đổi trả</a>&emsp;
+            <a href="#"><i class="fas fa-shipping-fast"></i>Giao nhanh 2h </a>&emsp;
+            <a href="#"><i class="fas fa-tag"></i>Gía siêu rẻ </a>&emsp;
+            <a href="#"><i class="fas fa-shipping-fast"></i>Freeship mọi đơn </a>&emsp;
+        </div>
+       
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

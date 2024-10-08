@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}<html>
+<head>
+    <title>
+        Welcome page: tao 1 form có 1 truong cho phep nguoi nhap Ten, sau do
+        nhan nut Welcome se hien thi loi chao
+    </title>
+
+    <script language="javascript">
+        function DisplayWelcome(msg) {
+            alert("Hello " + msg);
+        }
+        function Respond() {
+            var check = document.getElementsByName("checkbox");
+            if (check[0].ariaChecked == true) {
+                document.getElementById('huflit').innerHTML = 'Tôi là sinh viên khoa CNTT,trường HUFLIT';
+            }
+            if (check[1].checked == true) {
+                document.getElementById('Huflit').innerHTML = 'Tôi không phải là sinh viên CNTT,trường HUFLIT';
+            }
+        };
+    </script>
+</head>
+<body>
+    <form name="Welcome">
+        <input type="text" name="txtName" maxlength="50" value="" size="50" />
+        <input type="button" name="btnWelcome" value="Welcome"
+               onclick="DisplayWelcome(txtName.value); Homnay();" />
+    </form>
+    <h4>BẠN CÓ PHẢI LÀ SINH VIÊN KHOA CNTT, TRƯỜNG HUFLIT KHÔNG ?</h4>
+    <input type="radio" name="checkbox" id="chon" value=" " /> Phải
+    <br />
+    <input type="radio" name="checkbox" id="chon" value=" " /> Không phải
+    <br />
+    <input type="submit" value="Câu trả lời" onclick="respond();" />
+    <span id="huflit"></span>
+
+
+</body>
+</html>
+
